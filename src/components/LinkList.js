@@ -10,6 +10,7 @@ const FEED_QUERY = gql`
                 id
                 url
                 description
+                createdAt
             }
         }
     }
