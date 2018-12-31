@@ -123,8 +123,8 @@ class LinkList extends Component {
             document: NEW_LINKS_SUBSCRIPTION,
             updateQuery: (prev, { subscriptionData }) => {
                 if(!subscriptionData.data) return prev
-                const newLink = subscriptionData.data.newLink.node
-
+                const newLink = subscriptionData.data.newLink
+                console.log(prev.feed)
                 return Object.assign({}, prev, {
                     feed: {
                         links: [newLink, ...prev.feed.links],
